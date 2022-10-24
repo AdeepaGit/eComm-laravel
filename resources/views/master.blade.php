@@ -11,7 +11,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+<script src="https://kit.fontawesome.com/02e7483790.js" crossorigin="anonymous"></script>
 </head>
 <body>
     {{ View::make('header')}}
@@ -22,6 +22,53 @@
 .custom-login{
     padding:100px;
     hight:1000px;
+}
+img.slider-img{
+  height: 400px !important;
+  padding-left: 100px;
+}
+h3.Pro-name{
+    color:#000000;
+}
+p.description{
+    color: #ffffff;
+}
+.custom-product{
+    height: 600px !important;
+}
+.sider-text{
+    background-color: #00800024 !important;
+    border: 2px  ;
+  padding: 10px;
+  border-radius: 25px;
+}
+.trending-wrapper{
+    margin: 30px;
+}
+.tranding-item{
+    float: left;
+    width:25%;
+}
+.trending-img{
+    height: 100px;
+}
+.pro-name{
+    margin: 30px 0 30px 0;
+}
+.detai-img{
+    height: 200px;
+    margin:30px;
+}
+.crt-button{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+}
+.detail-descr{
+    margin-right:140px;
+}
+.search-item{
+    padding-bottom:40px;
 }
 
 </style>
