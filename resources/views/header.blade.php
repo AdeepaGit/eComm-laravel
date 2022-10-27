@@ -31,7 +31,7 @@ if(Session::has('user')){
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
-        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping lg">({{ $total }})</i></a>
+        <a class="nav-link" href="/cartList"><i class="fa-solid fa-cart-shopping lg">({{ $total }})</i></a>
             </li>
                @if(Session::has('user'))
 
