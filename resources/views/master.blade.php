@@ -70,7 +70,15 @@ p.description{
 .search-item{
     padding-bottom:40px;
 }
-
+.ordernow{
+    width: 60%;
+    height: auto;
+    background-color: #eaf3f2;
+    border-radius: 10px
+}
+.radio{
+    margin-right: 5px;
+}
 </style>
 
 

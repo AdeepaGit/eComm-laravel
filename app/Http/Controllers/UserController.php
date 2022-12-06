@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     //
     function login(request $req){
-       
+
         $User = User::where(['email'=>$req->email])->first();
         if(!$User || !Hash::check($req-> password,$User->password))
         {
@@ -19,5 +19,16 @@ class UserController extends Controller
             $req->session()->put('user',$User);
             return redirect('/');
         }
+    }
+    function register(request $req){
+        //return $req->input();
+        $user = new User;
+        $user->name=$req->name;
+        $user->email=$req->email;
+        $user->password=Hash::make($req->password);
+        $user->save();
+        return redirect('/login');
+
+
     }
 }
