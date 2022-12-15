@@ -52,4 +52,5 @@ if(Session::has('user')){
       </div>
     </div>
   </div>
+  @include('sweetalert::alert')
 </nav>

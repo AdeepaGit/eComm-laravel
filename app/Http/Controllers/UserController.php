@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
@@ -17,6 +18,7 @@ class UserController extends Controller
         }
         else{
             $req->session()->put('user',$User);
+            Alert::success('Success Title', 'Success Message');
             return redirect('/');
         }
     }
@@ -27,6 +29,8 @@ class UserController extends Controller
         $user->email=$req->email;
         $user->password=Hash::make($req->password);
         $user->save();
+
+        Alert::success('Registered Successfuly','please login.');
         return redirect('/login');
 
 

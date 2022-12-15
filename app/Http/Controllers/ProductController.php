@@ -8,6 +8,7 @@ use App\Models\Order;
 use Illuminate\Http\Request;
 use Session;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
@@ -36,6 +37,7 @@ class ProductController extends Controller
             $cart->user_id=$req->session()->get('user')['id'];
             $cart->product_id=$req->product_id;
             $cart->save();
+            Alert::success('Success Title', 'Success Message');
             return redirect('/');
         }
         else{
@@ -49,6 +51,8 @@ class ProductController extends Controller
     }
     function cartList()
     {
+        if(Session::has('user')){
+
         $userId=Session::get('user')['id'];
         $products=DB::table('cart')
         ->join('products','cart.product_id','=','products.id')
@@ -57,6 +61,12 @@ class ProductController extends Controller
         ->get();
 
         return view('cartList',['products'=>$products]);
+        }
+        else{
+            $message="Registered successfully";
+
+            return redirect('/login');
+        }
     }
     function removeCart($id)
     {

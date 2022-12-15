@@ -50,5 +50,6 @@
  </div>
   @endforeach
 </div>
+@include('sweetalert::alert')
 </div>
 @endsection

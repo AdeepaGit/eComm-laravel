@@ -1,6 +1,7 @@
 @extends('master')
 @section("content")
 <div class="custom-product">
+    @include('sweetalert::alert')
     <div class="row">
      <div class="col-sm-6">
        <img class="detai-img" src="{{$product['gallery']}}" alt="" >

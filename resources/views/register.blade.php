@@ -19,8 +19,10 @@
     </div>
 
   <button type="submit" class="btn btn-primary">Register</button>
+
    </form>
     </div>
+    @include('sweetalert::alert')
   </div>
 </div>
 @endsection

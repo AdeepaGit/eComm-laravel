@@ -7,7 +7,7 @@
     <div class="justify-content-center">
         <div class="trending-wrapper">
             <h4>Result for Products</h4>
-            <a href="ordernow" class="btn btn-success" >Order Now</a>
+            <a href="ordernow" class="btn btn-success orderbtn" >Order Now</a>
 
             @foreach ($products as $item)
             <div class="row search-item">
